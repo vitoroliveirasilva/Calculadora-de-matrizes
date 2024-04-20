@@ -1,6 +1,6 @@
 # Calculadora-de-matrizes
 Calculadora de matrizes em C
-  - Sdição
+  - Adição
   - Subtração
   - Multiplicação
   - Transposição
