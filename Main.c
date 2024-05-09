@@ -1,3 +1,10 @@
+/*
+ * Autor: Vitor Oliveira Silva
+ * Data: 20/03/2023
+ * Descrição: Este arquivo contém uma calculadora de operações com matrizes, incluindo adição, subtração, multiplicação, transposição, determinante, inversa e operações escalares.
+ */
+
+// Bibliotecas usadas
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,16 +13,6 @@
 
 // Função para entrada dos elementos na matriz
 void InputMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo]) {
-    /*
-     * Função: void InputMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo])
-     * Descrição: Loop para armazenas os elementos da matriz.
-     * Parâmetros:
-     *   linhas: O número de linhas da matriz.
-     *   colunas: O número de colunas da matriz.
-     *   matriz: A matriz onde os elementos serão armazenados.
-     * Retorno: Nenhum.
-     */
-
     int i, j;
     for (i = 0; i < linhas; i++) {
         for (j = 0; j < colunas; j++) {
@@ -31,16 +28,6 @@ void InputMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo]) {
 
 // Função para exibição de matriz
 void ExibirMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo]) {
-    /*
-     * Função: void ExibirMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo])
-     * Descrição: Exibe os elementos de uma matriz.
-     * Parâmetros:
-     *   linhas: O número de linhas da matriz.
-     *   colunas: O número de colunas da matriz.
-     *   matriz: A matriz a ser exibida.
-     * Retorno: Nenhum.
-     */
-
     int i, j;
     for (i = 0; i < linhas; i++) {
         for (j = 0; j < colunas; j++) {
@@ -52,16 +39,6 @@ void ExibirMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo]) {
 
 // Função para calcular a matriz inversa usando o método de eliminação de Gauss-Jordan
 void InversaMatriz(int dimensao, double (*matriz)[TamanhoMaximo], double (*matrizInversa)[TamanhoMaximo]) {
-    /*
-     * Função: void InversaMatriz(int dimensao, double (*matriz)[TamanhoMaximo], double (*matrizInversa)[TamanhoMaximo])
-     * Descrição: Calcula a matriz inversa usando o método de eliminação de Gauss-Jordan.
-     * Parâmetros:
-     *   dimensao: A dimensão da matriz quadrada.
-     *   matriz: A matriz original.
-     *   matrizInversa: A matriz onde a inversa será armazenada.
-     * Retorno: Nenhum.
-     */
-
     // Matriz temporária que armazena a matriz aumentada, sendo a matriz + a matriz identidade
     double matrizTemp[TamanhoMaximo][2 * TamanhoMaximo];
 
@@ -104,18 +81,6 @@ void InversaMatriz(int dimensao, double (*matriz)[TamanhoMaximo], double (*matri
 
 // Função para soma entre matrizes
 void SomaMatriz(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], double (*matrizB)[TamanhoMaximo], double (*matrizCalculo)[TamanhoMaximo]) {
-    /*
-     * Função: void SomaMatriz(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], double (*matrizB)[TamanhoMaximo], double (*matrizCalculo)[TamanhoMaximo])
-     * Descrição: Realiza a soma entre duas matrizes.
-     * Parâmetros:
-     *   linhas: O número de linhas das matrizes.
-     *   colunas: O número de colunas das matrizes.
-     *   matrizA: A primeira matriz.
-     *   matrizB: A segunda matriz.
-     *   matrizCalculo: A matriz onde a soma será armazenada.
-     * Retorno: Nenhum.
-     */
-
     int i, j;
     for (i = 0; i < linhas; i++) {
         for (j = 0; j < colunas; j++) {
@@ -126,18 +91,6 @@ void SomaMatriz(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], doubl
 
 // Função para subtração entre matrizes
 void SubtracaoMatriz(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], double (*matrizB)[TamanhoMaximo], double (*matrizCalculo)[TamanhoMaximo]) {
-    /*
-     * Função: void SubtracaoMatriz(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], double (*matrizB)[TamanhoMaximo], double (*matrizCalculo)[TamanhoMaximo])
-     * Descrição: Realiza a subtração entre duas matrizes.
-     * Parâmetros:
-     *   linhas: O número de linhas das matrizes.
-     *   colunas: O número de colunas das matrizes.
-     *   matrizA: A primeira matriz.
-     *   matrizB: A segunda matriz.
-     *   matrizCalculo: A matriz onde a subtração será armazenada.
-     * Retorno: Nenhum.
-     */
-
     int i, j;
     for (i = 0; i < linhas; i++) {
         for (j = 0; j < colunas; j++) {
@@ -148,19 +101,6 @@ void SubtracaoMatriz(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], 
 
 // Função para multiplicação entre matrizes
 void MultiplicacaoMatriz(int linhasA, int colunasA, int colunasB, double (*matrizA)[TamanhoMaximo], double (*matrizB)[TamanhoMaximo], double (*matrizCalculo)[TamanhoMaximo]) {
-    /*
-     * Função: void MultiplicacaoMatriz(int linhasA, int colunasA, int colunasB, double (*matrizA)[TamanhoMaximo], double (*matrizB)[TamanhoMaximo], double (*matrizCalculo)[TamanhoMaximo])
-     * Descrição: Realiza a multiplicação entre duas matrizes.
-     * Parâmetros:
-     *   linhasA: O número de linhas da primeira matriz.
-     *   colunasA: O número de colunas da primeira matriz e de linhas da segunda matriz.
-     *   colunasB: O número de colunas da segunda matriz.
-     *   matrizA: A primeira matriz.
-     *   matrizB: A segunda matriz.
-     *   matrizCalculo: A matriz onde o resultado da multiplicação será armazenado.
-     * Retorno: Nenhum.
-     */
-
     int i, j, k;
     for (i = 0; i < linhasA; i++) {
         for (j = 0; j < colunasB; j++) {
@@ -174,17 +114,6 @@ void MultiplicacaoMatriz(int linhasA, int colunasA, int colunasB, double (*matri
 
 // Função para transposição de matriz
 void TransposicaoMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo], double (*matrizTransposta)[TamanhoMaximo]) {
-    /*
-     * Função: void TransposicaoMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo], double (*matrizTransposta)[TamanhoMaximo])
-     * Descrição: Calcula a transposta de uma matriz.
-     * Parâmetros:
-     *   linhas: O número de linhas da matriz original.
-     *   colunas: O número de colunas da matriz original.
-     *   matriz: A matriz original.
-     *   matrizTransposta: A matriz onde a transposta será armazenada.
-     * Retorno: Nenhum.
-     */
-
     int i, j;
     for (i = 0; i < colunas; i++) {
         for (j = 0; j < linhas; j++) {
@@ -195,15 +124,6 @@ void TransposicaoMatriz(int linhas, int colunas, double (*matriz)[TamanhoMaximo]
 
 // Função para calcular o determinante de uma matriz quadrada
 double DeterminanteMatriz(int ordem, double (*matriz)[TamanhoMaximo]) {
-    /*
-     * Função: double DeterminanteMatriz(int ordem, double (*matriz)[TamanhoMaximo])
-     * Descrição: Calcula o determinante de uma matriz quadrada.
-     * Parâmetros:
-     *   ordem: A ordem da matriz quadrada.
-     *   matriz: A matriz quadrada.
-     * Retorno: O determinante da matriz.
-     */
-
     // Se a ordem da matriz for 1, retorna o único elemento da matriz como o determinante
     if (ordem == 1) {
         return matriz[0][0];
@@ -237,19 +157,6 @@ double DeterminanteMatriz(int ordem, double (*matriz)[TamanhoMaximo]) {
 
 // Função para executar uma operação escalar em uma matriz
 void OperacaoEscalar(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], double escalar, char operacao, double (*matrizResultado)[TamanhoMaximo]) {
-    /*
-     * Função: void OperacaoEscalar(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], double escalar, char operacao, double (*matrizResultado)[TamanhoMaximo])
-     * Descrição: Realiza uma operação escalar em uma matriz (multiplicação ou divisão por um escalar).
-     * Parâmetros:
-     *   linhas: O número de linhas da matriz.
-     *   colunas: O número de colunas da matriz.
-     *   matrizA: A matriz.
-     *   escalar: O escalar para a operação.
-     *   operacao: A operação a ser realizada ('1' para multiplicação, '2' para divisão).
-     *   matrizResultado: A matriz onde o resultado da operação será armazenado.
-     * Retorno: Nenhum.
-     */
-
     int i, j;
     // Loop para iterar sobre todas as células da matriz
     for (i = 0; i < linhas; i++) {
@@ -275,6 +182,7 @@ void OperacaoEscalar(int linhas, int colunas, double (*matrizA)[TamanhoMaximo], 
         }
     }
 }
+
 
 
 int main(void) {
