@@ -1,8 +1,13 @@
 /*
- * Autor: Vitor Oliveira Silva
- * Data: 20/03/2023
- * Descrição: Este arquivo contém uma calculadora de operações com matrizes, incluindo adição, subtração, multiplicação, transposição, determinante, inversa e operações escalares.
- */
+Integrantes
+    * Caio Soares Fóes - 32660
+    * Guilherme dos Santos Barbosa - 32816
+    * Tainan Fermino Peres - 32547
+    * Vitor Oliveira Silva - 32499
+    
+Descrição
+    Este arquivo contém uma calculadora de operações com matrizes, incluindo adição, subtração, multiplicação, transposição, determinante, inversa e operações escalares.
+*/
 
 // Bibliotecas usadas
 #include <stdio.h>
